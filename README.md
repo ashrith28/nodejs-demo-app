@@ -1,9 +1,9 @@
-🚀 DevOps Task 1 – CI/CD Pipeline with GitHub Actions
+# 🚀 DevOps Task 1 – CI/CD Pipeline with GitHub Actions
 📌 Objective
 
 Automate the build and deployment of a Node.js web application using GitHub Actions and DockerHub.
 
-⚙️ Tools & Technologies
+# ⚙️ Tools & Technologies
 
 GitHub – Code repository & CI/CD workflows
 
@@ -15,7 +15,7 @@ Docker – Containerization
 
 DockerHub – Image registry
 
-🛠️ Steps Implemented
+# 🛠️ Steps Implemented
 
 Created GitHub Repository – Uploaded the sample Node.js app (nodejs-demo-app).
 
@@ -33,12 +33,12 @@ Pushes the Docker image to DockerHub.
 
 Secrets Configuration – Stored DOCKER_USERNAME and DOCKER_PASSWORD in GitHub secrets for authentication.
 
-🐳 Docker Image
+# 🐳 Docker Image
 
 The Docker image is pushed to DockerHub:
 👉 dockerhub_username/nodejs-demo-app:latest
 
-📂 Project Structure
+# 📂 Project Structure
 .
 ├── nodejs-demo-app/       # Node.js sample app
 ├── Dockerfile             # Docker build instructions
@@ -47,26 +47,28 @@ The Docker image is pushed to DockerHub:
 │       └── main.yml       # CI/CD workflow
 └── README.md              # Documentation
 
-▶️ How to Run Locally
+# ▶️ How to Run Locally
 
 Clone the repo:
-
+```
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
+```
 
 
 Install dependencies and run app:
-
+```
 npm install
 npm start
-
+```
 
 Build and run Docker container:
-
+```
 docker build -t nodejs-demo-app .
 docker run -p 3000:3000 nodejs-demo-app
+```
 
-✅ Learning Outcome
+# ✅ Learning Outcome
 
 By completing this task, I learned:
 
