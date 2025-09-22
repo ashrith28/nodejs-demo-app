@@ -79,3 +79,16 @@ Automating test → build → push steps.
 Securing credentials with GitHub Secrets.
 
 Pushing Docker images to DockerHub automatically.
+
+
+
+# Here are some screenshots of this Task
+
+
+<img width="1859" height="970" alt="Screenshot from 2025-09-22 18-00-01" src="https://github.com/user-attachments/assets/46f5e2cd-9f67-48ab-a767-abfbd1941a4d" />
+
+
+<img width="1859" height="970" alt="Screenshot from 2025-09-22 18-00-18" src="https://github.com/user-attachments/assets/2c0e174c-0ced-4d17-a984-f0fc3c32462d" />
+
+
+<img width="1842" height="415" alt="Screenshot from 2025-09-22 18-01-46" src="https://github.com/user-attachments/assets/ffd446b4-6463-4f79-9ced-6b1ffe24ee9e" />
