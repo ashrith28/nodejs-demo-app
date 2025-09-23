@@ -1,13 +1,9 @@
 pipeline {
-    agent {
-    //     docker { 
-    //         image 'node:20'  // Node.js 20 image from Docker Hub
-    //         args '-u root:root' // optional: run as root to avoid permission issues
-    //     }
-    // }
+    agent any
 
     environment {
-        NODE_ENV = "development"
+        IMAGE_NAME = "ashrith-demo-app"
+        CONTAINER_NAME = "jenkins-demo"
     }
 
     stages {
@@ -18,30 +14,39 @@ pipeline {
             }
         }
 
-         stages {
         stage('Build') {
             steps {
-                echo 'Building the application...'
-                bat 'docker build -t nodejs-demo-app:latest .'
+                echo 'Building Docker image...'
+                sh 'docker build -t $IMAGE_NAME .'
             }
         }
 
-      stage('Test') {
-    steps {
-        echo 'Skipping tests (none configured)...'
-    }
-}
-
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Example: run unit tests
+                sh 'echo "No tests configured, skipping..."'
+            }
+        }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
-                bat '''
-                  docker stop nodejs-demo || exit 0
-                  docker rm nodejs-demo || exit 0
-                  docker run -d -p 3000:3000 --name nodejs-demo nodejs-demo-app:latest
+                echo 'Deploying application...'
+                // Stop and remove old container if exists
+                sh '''
+                docker ps -q --filter "name=$CONTAINER_NAME" | grep -q . && docker stop $CONTAINER_NAME && docker rm $CONTAINER_NAME || true
+                docker run -d -p 3000:3000 --name $CONTAINER_NAME $IMAGE_NAME
                 '''
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Please check the logs.'
         }
     }
 }
