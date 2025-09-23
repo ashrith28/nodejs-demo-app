@@ -134,3 +134,5 @@ This project demonstrates a simple **Jenkins Pipeline** to automate the process 
 
 <img width="1855" height="774" alt="Screenshot from 2025-09-23 19-45-28" src="https://github.com/user-attachments/assets/6fae1940-a856-4d1b-a99d-12b055e44e52" />
 
+
+<img width="1855" height="865" alt="image" src="https://github.com/user-attachments/assets/0a53e5ee-bb54-4529-a1d2-3bc2490fd266" />
