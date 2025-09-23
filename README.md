@@ -92,3 +92,45 @@ Pushing Docker images to DockerHub automatically.
 
 
 <img width="1842" height="415" alt="Screenshot from 2025-09-22 18-01-46" src="https://github.com/user-attachments/assets/ffd446b4-6463-4f79-9ced-6b1ffe24ee9e" />
+
+
+
+# Jenkins CI/CD Pipeline – Task 2 
+
+## 📌 Objective
+This project demonstrates a simple **Jenkins Pipeline** to automate the process of building and deploying a Dockerized application.
+
+## ⚙️ Tools Used
+- **Jenkins** – CI/CD automation tool  
+- **Docker** – To containerize and run the application  
+
+## 📂 Project Structure
+
+├── Jenkinsfile # Defines the CI/CD pipeline
+├── Dockerfile # Builds the app image
+├── app/ # Application source code
+└── README.md # Documentation
+
+## 🚀 Pipeline Stages
+1. **Checkout** – Clones the repository.  
+2. **Build** – Builds a Docker image from the source code.  
+3. **Test** – Runs application/unit tests (can be extended).  
+4. **Deploy** – Runs the container on port 3000.  
+
+## 🛠️ Setup Instructions
+1. Install Jenkins (local or cloud).  
+2. Install **Docker** on the Jenkins server.  
+3. Create a **Jenkins pipeline job** and connect it to this repository.  
+4. Jenkins will detect the `Jenkinsfile` and run the pipeline.
+
+## 📸 Screenshots
+
+
+<img width="1855" height="774" alt="Screenshot from 2025-09-23 19-44-35" src="https://github.com/user-attachments/assets/c600518b-54d7-4235-b3f0-b8b58ffbaaf3" />
+
+
+<img width="1855" height="774" alt="Screenshot from 2025-09-23 19-44-48" src="https://github.com/user-attachments/assets/2bd8c054-8006-4ca6-939f-5c7664ed87a7" />
+
+
+<img width="1855" height="774" alt="Screenshot from 2025-09-23 19-45-28" src="https://github.com/user-attachments/assets/6fae1940-a856-4d1b-a99d-12b055e44e52" />
+
