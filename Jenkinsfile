@@ -34,7 +34,10 @@ pipeline {
                 echo 'Deploying application...'
                 // Stop and remove old container if exists
                 sh '''
-                docker ps -q --filter "name=$CONTAINER_NAME" | grep -q . && docker stop $CONTAINER_NAME && docker rm $CONTAINER_NAME || true
+                if [ "$(docker ps -aq -f name=$CONTAINER_NAME)" ]; then
+                docker stop $CONTAINER_NAME || true
+                docker rm $CONTAINER_NAME || true
+                fi
                 docker run -d -p 3000:3000 --name $CONTAINER_NAME $IMAGE_NAME
                 '''
             }
